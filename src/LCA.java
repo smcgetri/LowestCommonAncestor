@@ -14,7 +14,7 @@ class Node
     }
 }
 
-public class BinaryTree
+public class LCA
 {
     Node root;
     Node findLCA(int n1, int n2)

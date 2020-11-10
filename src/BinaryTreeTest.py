@@ -1,8 +1,8 @@
 import unittest
 import BinaryTree
 
-class MyTestCase(unittest.TestCase):
 
+class MyTestCase(unittest.TestCase):
     BinaryTree.root = BinaryTree.Node(1)
     BinaryTree.root.left = BinaryTree.Node(2)
     BinaryTree.root.right = BinaryTree.Node(3)
@@ -31,6 +31,7 @@ class MyTestCase(unittest.TestCase):
 
     def test_node_fake(self):
         self.assertEqual(BinaryTree.findLCA(BinaryTree.root, 8, 8), None)
+
 
 if __name__ == '__main__':
     unittest.main()

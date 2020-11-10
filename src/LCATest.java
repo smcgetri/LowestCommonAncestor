@@ -3,24 +3,24 @@ import static org.junit.Assert.assertNull;
 
 import org.junit.jupiter.api.Test;
 
-class BinaryTreeTest {
+class LCATest {
 
     @Test
     public void testEmptyTree() {
-        BinaryTree tree = new BinaryTree();
+        LCA tree = new LCA();
         assertNull(tree.findLCA(0, 0));
     }
 
     @Test
     public void testTreeWithOneNode() {
-        BinaryTree tree = new BinaryTree();
+        LCA tree = new LCA();
         tree.root = new Node(1);
         assertEquals(1, tree.findLCA(1,1).data);
     }
 
     @Test
     public void testTree() {
-        BinaryTree tree = new BinaryTree();
+        LCA tree = new LCA();
         tree.root = new Node(1);
         tree.root.left = new Node(2);
         tree.root.right = new Node(3);
@@ -29,7 +29,7 @@ class BinaryTreeTest {
 
     @Test
     public void testLeftTree() {
-        BinaryTree tree = new BinaryTree();
+        LCA tree = new LCA();
         tree.root = new Node(1);
         tree.root.left = new Node(2);
         tree.root.left.left = new Node(3);
@@ -38,7 +38,7 @@ class BinaryTreeTest {
 
     @Test
     public void testRightTree() {
-        BinaryTree tree = new BinaryTree();
+        LCA tree = new LCA();
         tree.root = new Node(1);
         tree.root.right = new Node(2);
         tree.root.right.right = new Node(3);
@@ -47,7 +47,7 @@ class BinaryTreeTest {
 
     @Test
     public void testSubTreeLeft() {
-        BinaryTree tree = new BinaryTree();
+        LCA tree = new LCA();
         tree.root = new Node(1);
         tree.root.left = new Node(2);
         tree.root.right = new Node(3);
@@ -60,7 +60,7 @@ class BinaryTreeTest {
 
     @Test
     public void testSubTreeRight() {
-        BinaryTree tree = new BinaryTree();
+        LCA tree = new LCA();
         tree.root = new Node(1);
         tree.root.left = new Node(2);
         tree.root.right = new Node(3);
@@ -73,7 +73,7 @@ class BinaryTreeTest {
 
     @Test
     public void testWithNegatives() {
-        BinaryTree tree = new BinaryTree();
+        LCA tree = new LCA();
         tree.root = new Node(-1);
         tree.root.left = new Node(-2);
         tree.root.right = new Node(-3);
